@@ -3,13 +3,10 @@
 % -------------------
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8x]{inputenc}
-\usepackage[T1]{fontenc}
-%\usepackage{gentium}
 \usepackage{mathptmx} % Use Times Font
 
-
 \usepackage[pdftex]{graphicx} % Required for including pictures
-\usepackage[swedish]{babel} % Swedish translations
+\usepackage[dutch]{babel} % Dutch translations
 \usepackage[pdftex,linkcolor=black,pdfborder={0 0 0}]{hyperref} % Format links for pdf
 \usepackage{calc} % To reset the counter in the document after title page
 \usepackage{enumitem} % Includes lists
@@ -22,28 +19,29 @@
 \usepackage[all]{nowidow} % Tries to remove widows
 \usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
 
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
 
 %-----------------------
 % Set pdf information and add title, fill in the fields
 %-----------------------
 \hypersetup{ 	
-pdfsubject = {},
-pdftitle = {},
-pdfauthor = {}
+pdfsubject = {Documentatie voor PAJUPL},
+pdftitle = {Documentatie PAJUPL},
+pdfauthor = {J and P}
 }
+
+\usepackage{subfiles} % Use subfiles to include other texes.
+\title{Documentatie PAJUPL}
+\author{J \& P}
 
 %-----------------------
 % Begin document
 %-----------------------
-\begin{document} %All text i dokumentet hamnar mellan dessa taggar, allt ovanför är formatering av dokumentet
-
-\section{Introduction}
-
-\lipsum[1-3]
-
-
-\subsection*{Subtitle}
-% \lipsum[4-5]
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\addcontentsline{toc}{section}{Inhoudsopgave}
+\newpage
+\subfile{beginselen}
+\subfile{roadmap}
 \end{document}
